@@ -26,7 +26,7 @@ private:
 
 void ArrayGeneratorSorter::printSortingOptions()
 {
-	cout << "Choose one of below 3 sorting methods:\n"
+	cout << "\nChoose one of below 3 sorting methods:\n"
 		<< "\t1) Bubble sort\n"
 		<< "\t2) Selection sort\n"
 		<< "\t3) Insertion sort\n\n"
@@ -47,6 +47,9 @@ void ArrayGeneratorSorter::sortingAlgoritmChoice(int arraySize, int arr[])
 		cin >> choice;
 	}
 
+	cout << "Array status before sorting:\n\t";
+	printArray(arraySize, arr);
+
 	switch (choice)
 	{
 	case 1:
@@ -58,6 +61,9 @@ void ArrayGeneratorSorter::sortingAlgoritmChoice(int arraySize, int arr[])
 	case 3:
 		insertionSort(arraySize, arr);
 	}
+
+	cout << "Array status after sorting:\n\t";
+	printArray(arraySize, arr);
 }
 
 
@@ -172,8 +178,6 @@ void ArrayGeneratorSorter::userArrayManualFillIn(int arraySize, int userArray[])
 
 void ArrayGeneratorSorter::printArray(int arraySize, int arr[])
 {
-	cout << "\n\nThe requested array status is:\n";
-
 	for (int i = 0; i < arraySize; i++)
 	{
 		cout << arr[i] << "\t";

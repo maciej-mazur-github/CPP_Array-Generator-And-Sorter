@@ -14,4 +14,6 @@ int main(void)
 	//int* automaticArray = ArrayGeneratorSorter::generateArrayManualFillIn(7);
 	int* automaticArray = ArrayGeneratorSorter::generateArrayAutomaticFillIn(7);
 	ArrayGeneratorSorter::printArray(7, automaticArray);
+	ArrayGeneratorSorter::sortingAlgoritmChoice(7, automaticArray);
+	//ArrayGeneratorSorter::printArray(7, automaticArray);
 }
